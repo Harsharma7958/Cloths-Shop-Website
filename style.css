@@ -1,0 +1,22 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.show{
+    columns: 3 18vw;
+    /* column-gap: 3px; */
+}
+
+.img{
+    display: block;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.cards{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
