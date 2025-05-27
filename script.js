@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll('.navigation').forEach((e) => {
         e.addEventListener('click', () => {
-            // document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'auto';
             tl.reverse();
         })
     })
