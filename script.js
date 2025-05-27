@@ -20,24 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var menu = document.querySelector('.menu')
     var cross = document.querySelector('.cross')
-    var tl = gsap.timeline({reversed: true});
+    var tl = gsap.timeline({ reversed: true });
 
     document.querySelectorAll('.navigation').forEach((e) => {
         e.addEventListener('click', () => {
-            document.body.style.overflow = 'auto';
+            // document.body.style.overflow = 'auto';
             tl.reverse();
         })
     })
 
     function mobileMenu() {
         tl.to('.mobile-menu', {
-            left: 0,
+            right:0,
             duration: 0.4,
             ease: 'power2.out'
         })
 
         tl.from('.mobile-menu a', {
-            left: 100,
+            right: -100,
             duration: 0.3,
             stagger: 0.2,
             opacity: 0,
@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     mobileMenu()
+
+
+
 
     function navbarAnimate() {
         var tl1 = gsap.timeline();
