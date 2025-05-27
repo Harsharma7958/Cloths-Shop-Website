@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var menu = document.querySelector('.menu')
     var cross = document.querySelector('.cross')
-    var tl = gsap.timeline();
+    var tl = gsap.timeline({reversed: true});
 
     document.querySelectorAll('.navigation').forEach((e) => {
         e.addEventListener('click', () => {
-            tl.reverse();
             document.body.style.overflow = 'auto';
+            tl.reverse();
         })
     })
 
