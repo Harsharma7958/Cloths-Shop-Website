@@ -87,7 +87,8 @@ function navbarAnimate() {
 
 navbarAnimate()
 
-gsap.from(".collections", {
+function pageAnimate(){
+    gsap.from(".collections", {
     y: '20%',
     duration: 1,
     opacity: 0,
@@ -97,7 +98,6 @@ gsap.from(".collections", {
         // markers: true,
         start: "top 70%",
         end: "top 50%",
-        // toggleActions: "play none none reverse"
     }
 });
 
@@ -111,7 +111,6 @@ gsap.from('#about', {
         // markers: true,
         start: "top 100%",
         end: "top 50%",
-        // toggleActions: "play none none reverse"
     }
 });
 
@@ -122,10 +121,9 @@ gsap.from('#bestsellers h2', {
     scrollTrigger: {
         trigger: '#bestsellers h2',
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 100%",
         end: "top 50%",
-        // toggleActions: "play none none reverse"
     }
 });
 
@@ -138,10 +136,14 @@ gsap.from('#bestsellers .show .img', {
     scrollTrigger: {
         trigger: '#bestsellers .show .img',
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 100%",
         end: "top 50%",
         
     }
 });
 
+
+}
+
+pageAnimate()
