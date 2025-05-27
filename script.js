@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function mobileMenu() {
         tl.to('.mobile-menu', {
-            right:0,
+            right: 0,
             duration: 0.4,
             ease: 'power2.out'
         })
@@ -165,9 +165,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.querySelector('.submit').addEventListener('click', () => {
-    sendMail()
-})
+const btn = document.querySelector('.submit');
+
+btn.addEventListener('click', () => {
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+    btn.style.cursor = 'not-allowed'; 
+
+    sendMail().then(() => {
+        btn.disabled = false;
+        btn.innerText = "Submit"; // Restore button text
+    btn.style.cursor = 'pointer'; 
+    });
+});
 
 function sendMail() {
     let parms = {
@@ -175,7 +185,7 @@ function sendMail() {
         email: document.getElementById('mail').value,
         subject: document.getElementById('sub').value,
         message: document.getElementById('mess').value
-    }
+    };
 
     if (parms.name.length > 3) {
         document.querySelector('.name-error').innerHTML = "";
@@ -185,13 +195,19 @@ function sendMail() {
                 document.querySelector('.subject-error').innerHTML = "";
                 if (parms.message) {
                     document.querySelector('.message-error').innerHTML = "";
-                    emailjs.send("service_usq78ps", "template_xzu4l52", parms).then(
+
+                    // ✅ Return the promise here
+                    return emailjs.send("service_usq78ps", "template_xzu4l52", parms).then(
                         (response) => {
-                            alert('SUCCESS!', response.status, response.text);
+                            alert('Thank you for reaching out! We will get back to you soon.', response.status, response.text);
+                            document.getElementById('name').value = '';
+                            document.getElementById('mail').value = '';
+                            document.getElementById('sub').value = '';
+                            document.getElementById('mess').value = '';
                         },
                         (error) => {
                             alert('FAILED...', error);
-                        },
+                        }
                     );
                 } else {
                     document.querySelector('.message-error').innerHTML = "Fill your query";
@@ -203,7 +219,12 @@ function sendMail() {
             document.querySelector('.email-error').innerHTML = "Fill valid mail id";
         }
     } else {
-        document.querySelector('.name-error').innerHTML = "Lenght of the name must be greater than 3 characters";
+        document.querySelector('.name-error').innerHTML = "Length of the name must be greater than 3 characters";
     }
 
+    // ✅ Add fallback: return a dummy resolved promise to avoid `.then` crash
+    return Promise.resolve();
 }
+
+
+
