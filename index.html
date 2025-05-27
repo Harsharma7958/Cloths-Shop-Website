@@ -25,21 +25,31 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "R6rLln7XyevzotUye",
+            });
+        })();
+    </script>
+
 
 </head>
 
 <body class="">
     <div class="main w-[85vw] md:w-[75vw] mx-auto">
-        <div class="navbar flex items-center justify-between w-full pt-[0.5rem]">
+        <div class="navbar flex items-center justify-between     w-full pt-[0.5rem]">
             <div class="left">
                 <a href="index.html"><img loading="lazy" src="assets/logo.png" alt="Logo" class="w-[9vw]"></a>
             </div>
             <div class="right items-center gap-[4vw] text-bold hidden md:flex">
-                <a class="dow hover:underline transition duration-500" href="index.html">Home</a>
-                <a class="dow hover:underline transition duration-500" href="#about">About</a>
-                <a class="dow hover:underline transition duration-500" href="#bestsellers">Bestsellers</a>
-                <a class="dow hover:underline transition duration-500" href="#customer-review">Coustmer Review</a>
-                <a class="dow hover:underline transition duration-500" href="#contact-form">Contact</a>
+                <a class="dow link-underline font-semibold " href="index.html">Home</a>
+                <a class="dow link-underline font-semibold " href="#about">About</a>
+                <a class="dow link-underline font-semibold " href="#bestsellers">Bestsellers</a>
+                <a class="dow link-underline font-semibold " href="#customer-review">Coustmer Review</a>
+                <a class="dow link-underline font-semibold " href="#contact-form">Contact</a>
             </div>
 
             <a href="tel:+919039544917">
@@ -61,17 +71,12 @@
         <div class="relative w-full overflow-x-hidden z-10">
             <div
                 class="mobile-menu fixed flex flex-col right-[-100%] w-full items-center p-[1rem] pt-10 h-full top-0 gap-[3rem] bg-[rgba(255, 255, 255, 0.185)] backdrop-blur-xl ">
-                <a class="navigation font-bold text-2xl relative"
-                    onclick="tl.reverse(); document.body.style.overflow = 'auto';" href="index.html">Home</a>
-                <a class="navigation font-bold text-2xl relative"
-                    onclick="tl.reverse(); document.body.style.overflow = 'auto';" href="#about">About</a>
-                <a class="navigation font-bold text-2xl relative"
-                    onclick="tl.reverse(); document.body.style.overflow = 'auto';" href="#bestsellers">Bestsellers</a>
-                <a class="navigation font-bold text-2xl relative"
-                    onclick="tl.reverse(); document.body.style.overflow = 'auto';" href="#customer-review ">Coustmer
+                <a class="navigation font-bold text-2xl relative" href="index.html">Home</a>
+                <a class="navigation font-bold text-2xl relative" href="#about">About</a>
+                <a class="navigation font-bold text-2xl relative" href="#bestsellers">Bestsellers</a>
+                <a class="navigation font-bold text-2xl relative" href="#customer-review ">Coustmer
                     Review</a>
-                <a class="navigation font-bold text-2xl relative"
-                    onclick="tl.reverse(); document.body.style.overflow = 'auto';" href="#contact-form">Contact</a>
+                <a class="navigation font-bold text-2xl relative" href="#contact-form">Contact</a>
 
                 <svg class="cross w-[2rem] md:hidden absolute right-7 top-7 " xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24" fill="currentColor">
@@ -87,16 +92,16 @@
             <h1 class="text-[4vw] w-1/2 font-bold text-[#4A2110]">Stylish Clothing for Every Occasion</h1>
             <div class="my-5 w-full flex items-center ">
                 <a class="mx-auto bg-[#C5AB74] p-2 rounded-lg cursor-pointer font-bold text-white hover:bg-[#421B0A]"
-                    href="#contact-form"><button class="cursor-pointer " href="#contact-form">Contact Us</button></a>
+                    href="#contact-form"><button class="cursor-pointer ">Contact Us</button></a>
             </div>
         </div>
 
         <div class="mobile-cover flex items-center w-full gap-7 mt-5 mx-auto md:hidden">
             <div class="left w-[50%] space-y-5">
                 <h1 class="font-bold text-3xl">Stylish Clothing for Every Occasion</h1>
-                <div class="show">
-                    <a class="bg-[#C5AB74] px-2 py-1 rounded-lg cursor-pointer font-bold text-white hover:bg-[#421B0A]"
-                        href="#contact-form"><button class="cursor-pointer">Contact Us</button></a>
+                <div class="show w-full">
+                    <a class="bg-[#C5AB74] px-2 py-1 rounded-lg cursor-pointer font-bold text-white hover:bg-[#421B0A] w-full"
+                        href="#contact-form">Connect</a>
                 </div>
             </div>
             <div class="right show w-[40%]">
@@ -106,14 +111,14 @@
 
 
         <div class="collections flex items-center w-full flex-col">
-            <h2 class="mt-[2rem] font-bold text-2xl md:text-3xl">Our Collections </h2>
+            <h2 class="mt-[2rem] font-bold text-2xl md:text-3xl">✧ Our Collections ✧ </h2>
             <div class="collection-products flex justify-between w-full p-[2rem] items-center ">
                 <div class="item flex flex-col items-center gap-[1rem] md:w-auto w-[30%]">
                     <img loading="lazy" class=" rounded-xl cursor-pointer" src="assets/img8.jpg" alt="Carsual dress">
                     <h3 class="font-semibold">Casual Dress</h3>
                 </div>
                 <div class="item flex flex-col items-center gap-[1rem] md:w-auto w-[30%]">
-                    <img loading="lazy" class=" rounded-xl cursor-pointer" src="assets/img 1.jpg" alt="Mens wear">
+                    <img loading="lazy" class=" rounded-xl cursor-pointer" src="assets/img1.jpg" alt="Mens wear">
                     <h3 class="font-semibold">Mens Wear</h3>
                 </div>
                 <div class="item flex flex-col items-center gap-[1rem] md:w-auto w-[30%]">
@@ -124,7 +129,7 @@
         </div>
 
         <div id="about" class=" w-full flex flex-col">
-            <h2 class="mt-[2rem] font-bold text-2xl md:text-3xl self-center mb-3">About Us</h2>
+            <h2 class=" font-bold text-2xl md:text-3xl self-center mb-3">✧ About Us ✧</h2>
             <p class="text-sm">
                 At <strong>Zarista</strong>, we believe fashion is more than just clothing — it's a form of
                 self-expression. Founded with a passion for style and sustainability, we offer a curated collection of
@@ -146,15 +151,15 @@
         </div>
 
         <div id="bestsellers" class=" flex items-center w-full flex-col">
-            <h2 class="my-[2rem] font-bold text-2xl md:text-3xl">Out Bestsellers</h2>
+            <h2 class="my-[2rem] font-bold text-2xl md:text-3xl">✧ Our Bestsellers ✧</h2>
             <div class="show items-center w-[85%] ">
-                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img 1.jpg"
+                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img1.jpg"
                     alt="Mens white t-shirt">
-                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img 5.jpg"
+                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img5.jpg"
                     alt="A girl's one pice dress">
-                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img 4.jpg"
+                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img4.jpg"
                     alt="Girls dress">
-                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img 3.jpg"
+                <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img3.jpg"
                     alt="Mens linling shirt">
                 <img loading="lazy" class="img w-[18vw] rounded-xl mb-2 mx-auto  " src="assets/img6.jpg"
                     alt="Girls tops">
@@ -182,11 +187,11 @@
         </div>
 
         <div id="customer-review" class="flex items-center w-full flex-col relative">
-            <h2 class="my-[2rem] font-bold text-2xl md:text-3xl">Customer Reviews</h2>
+            <h2 class="my-[2rem] font-bold text-2xl md:text-3xl">✧ Customer Reviews ✧</h2>
             <div class="cards w-full p-2 flex  gap-4 overflow-x-scroll scollbar-hidden ">
 
                 <div
-                    class="card shrink-0 h-[200px] w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
+                    class="card shrink-0 mb-2 w-full sm:w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
                     <div class="card-top flex items-center gap-5">
                         <img loading="lazy" src="assets/review1.jpg" alt="Review-1"
                             class="w-[4rem] h-[4rem] rounded-full">
@@ -203,7 +208,7 @@
                 </div>
 
                 <div
-                    class="card shrink-0 h-[200px] w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
+                    class="card shrink-0 mb-2 w-full sm:w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
                     <div class="card-top flex items-center gap-5">
                         <img loading="lazy" src="assets/review2.jpg" alt="reviwe-2"
                             class="w-[4rem] h-[4rem] rounded-full">
@@ -219,7 +224,7 @@
                 </div>
 
                 <div
-                    class="card shrink-0 h-[200px] w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
+                    class="card shrink-0 mb-2 w-full sm:w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
                     <div class="card-top flex items-center gap-5">
                         <img loading="lazy" src="assets/review3.jpg" alt="review-3"
                             class="w-[4rem] h-[4rem] rounded-full">
@@ -235,7 +240,7 @@
                 </div>
 
                 <div
-                    class="card shrink-0 h-[200px] w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
+                    class="card shrink-0 mb-2 w-full sm:w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
                     <div class="card-top flex items-center gap-5">
                         <img loading="lazy" src="assets/review1.jpg" alt="review-4"
                             class="w-[4rem] h-[4rem] rounded-full">
@@ -252,7 +257,7 @@
                 </div>
 
                 <div
-                    class="card shrink-0 h-[200px] w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
+                    class="card shrink-0 mb-2 w-full sm:w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
                     <div class="card-top flex items-center gap-5">
                         <img loading="lazy" src="assets/review2.jpg" alt="review-5"
                             class="w-[4rem] h-[4rem] rounded-full">
@@ -268,7 +273,7 @@
                 </div>
 
                 <div
-                    class="card shrink-0 h-[200px] w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
+                    class="card shrink-0 mb-2 w-full sm:w-[50%] md:w-[32%] bg-[#ffd] px-4 py-2 rounded-xl flex flex-col items-center gap-4">
                     <div class="card-top flex items-center gap-5">
                         <img loading="lazy" src="assets/review3.jpg" alt="review-6"
                             class="w-[4rem] h-[4rem] rounded-full">
@@ -287,20 +292,33 @@
         </div>
 
         <div id="contact-form"
-            class=" customer-review flex w-[85%] md:w-1/2 flex-col mx-auto bg-[#ffe] mt-5 py-3 px-5 shadow-2xl rounded-xl">
-            <h2 class="font-bold text-2xl md:text-3xl self-center">Get in Touch</h2>
-            <div class="mt-3 text-md">Name:</div>
+            class=" customer-review flex w-[85%] md:w-[60%] flex-col mx-auto bg-[#ffe] mt-5 py-3 px-5 shadow-2xl rounded-xl">
+            <h2 class="font-bold text-2xl md:text-3xl self-center">✦ Get in Touch ✦</h2>
+            <div class="mt-3 text-md">Name: <span class="text-red-500">*</span></div>
             <input class="rounded border border-gray-300 focus:ring-2 focus:ring-[#C5AB74] outline-none p-2 text-sm"
-                type="text" placeholder="Enter your Name">
-            <div class="mt-3 text-md">Email:</div>
+                type="text" placeholder="Enter your Name" id="name" name="nam">
+            <div class="name-error text-xs text-red-500"></div>
+            <div class="mt-3 text-md">Email: <span class="text-red-500">*</span></div>
+            <input class="rounded border border-gray-300 focus:ring-2 focus:ring-[#C5AB74]  outline-none p-2 text-sm"
+                type="email" placeholder="Enter your Email" id="mail" name="email">
+            <div class="email-error text-xs text-red-500"></div>
+            <div class="mt-3 text-md">Subject: <span class="text-red-500">*</span></div>
             <input class="rounded border border-gray-300 focus:ring-2 focus:ring-[#C5AB74] outline-none p-2 text-sm"
-                type="text" placeholder="Enter your Email">
+                type="text" placeholder="Subject" id="sub" name="subject">
+            <div class="subject-error text-xs text-red-500"></div>
+            <div class="mt-3 text-md">Message: <span class="text-red-500">*</span></div>
             <textarea
-                class="rounded border mt-5 border-gray-300 focus:ring-2 focus:ring-[#C5AB74] outline-none p-2 text-sm"" rows="
-                5" placeholder="Enter your Query here..."></textarea>
+                class="rounded border  border-gray-300 focus:ring-2 focus:ring-[#C5AB74] outline-none p-2 text-sm"" rows="
+                5" placeholder="Enter your Query here..." id="mess" name="message"></textarea>
+            <div class="message-error text-xs text-red-500"></div>
+
+            <div class="my-5 w-full flex items-center ">
+                <button
+                    class="submit mx-auto bg-[#C5AB74] p-2 rounded-lg cursor-pointer font-bold text-white hover:bg-[#421B0A]">Submit</button>
+            </div>
         </div>
 
-        <div class="footer flex justify-between  mt-7">
+        <div class="footer flex justify-between mt-7 gap-2">
             <div class="footer-left space-y-2">
                 <div class="location flex gap-2 items-center">
                     <svg class="w-[1.5rem]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -328,7 +346,7 @@
                 </div>
             </div>
 
-            <div class="footer-right text-sm space-x-2">
+            <div class="footer-right text-sm flex flex-col gap-2 md:block md:space-x-2">
                 <a class="hover:underline" href="#">Privacy Policy</a>
                 <a class="hover:underline" href="#">Terms of Service</a>
             </div>
