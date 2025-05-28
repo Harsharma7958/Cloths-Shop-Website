@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://cloths-shop-website.vercel.app/sitemap.xml
